@@ -11,19 +11,21 @@ public class Main {
 
         for (int i = 1; i <= 10; i++) {
             balanceF += 0.10;
-            System.out.printf("%.10f\n", balanceF);
             balanceD += 0.10;
-            System.out.printf("%.10f\n", balanceD);
             balanceB = balanceB.add(BigDecimal.valueOf(0.10));
-            System.out.println(balanceB);
         }
-        System.out.println(balanceF + " | " + balanceD + " | " + balanceB);
+        System.out.printf("%.12f | %.12f | %.12f\n", balanceF, balanceD, balanceB);
 
         balanceF = 0;
         balanceD = 0;
         balanceB = BigDecimal.ZERO;
 
-
+        for (int i = 1; i <= 1000; i++) {
+            balanceF += 19.99;
+            balanceD += 19.99;
+            balanceB = balanceB.add(BigDecimal.valueOf(19.99));
+        }
+        System.out.printf("%.12f | %.12f | %.12f", balanceF, balanceD, balanceB);
 
 
 
